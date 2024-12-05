@@ -75,7 +75,7 @@ submitButton.addEventListener("click", function() {
     .then((userCredential) => {
       console.log("Success! Welcome back!");
       window.alert("Success! Welcome back!");
-      window.location = '../../Booking-Page/outsider.html';  // Redirect to the booking page
+      window.location = '/LandingOutsider.html';  // Redirect to the booking page
     })
     .catch((error) => {
       console.error("Login error:", error);

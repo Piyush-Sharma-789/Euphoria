@@ -81,12 +81,20 @@ submitButton.addEventListener("click", function() {
     .then((userCredential) => {
       console.log("Success! Welcome back!");
       window.alert("Success! Welcome back!");
-      window.location = '../Booking-Page/home.html';  // Redirect to the booking page
+      window.location = '/LandingInsider.html';  // Redirect to the booking page
     })
     .catch((error) => {
       console.error("Login error:", error);
-      window.alert("Error occurred. Try again.");
+      window.alert("Please fill correct email or password!");
     });
+    /*if (!email ) {
+      window.alert("Please fill email field");
+      return;
+    }
+    if (!password ) {
+      window.alert("Please fill password field");
+      return;
+    }*/
 });
 
 // Show signup form

@@ -9,11 +9,17 @@ body {
   background-color:white;
 }
 .title-design {
-  width: 100%;
-  height: 40px;
-  background-color:#f51616;
-  padding-top: 10px;
-  padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color:#f51616;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+img{
+  margin-top: 30px;
 }
 .title-design-title {
   color: white;
@@ -97,4 +103,72 @@ body {
 }
 .marq-design {
   color: white;
+}
+
+
+
+/* Profile Button Container */
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Round Profile Button */
+.profile-button {
+  
+  width: 50px;
+  height: 50px;
+  /*margin-left: 1080px;*/
+
+  float: left;
+  border-radius: 50%;
+  background-color:#640a0a;
+  
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  margin-top: 0px;
+}
+
+.profile-button:hover {
+  background-color: #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.profile-container:hover .dropdown {
+  display: block;
+}
+
+/* Dropdown Buttons */
+.dropdown button {
+  width: 20vh;
+  padding: 10px 20px;
+
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.dropdown button:hover {
+  background-color: #f5f5f5;
 }

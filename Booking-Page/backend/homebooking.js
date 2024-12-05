@@ -136,29 +136,6 @@ detailForm.addEventListener("submit", (event) => {
   });
 });
 
-//refund money
-const refundMoney = document.getElementById("refund_amount");
-const navbar = document.getElementById("navbar");
-const grab2 = document.getElementById("grab2");
-const l1 = document.getElementById("l1");
-const l2 = document.getElementById("l2");
-const l3 = document.getElementById("l3");
-const l4 = document.getElementById("l4");
-const l5 = document.getElementById("l5");
-const l6 = document.getElementById("l6");
-refundMoney.addEventListener("click", (e) => {
-  e.preventDefault();
-  
-  document.body.style.backgroundColor = "#000000";
-  grab2.style.color = "#FFFFFF"
-  l1.style.color = "#FFFFFF"
-  l2.style.color = "#FFFFFF"
-  l3.style.color = "#FFFFFF"
-  l4.style.color = "#FFFFFF"
-  l5.style.color = "#FFFFFF"
-  l6.style.color = "#FFFFFF"
-});
-
 //clear all
 const clearAll = document.getElementById("clear_all");
 clearAll.addEventListener("click", (e) => {

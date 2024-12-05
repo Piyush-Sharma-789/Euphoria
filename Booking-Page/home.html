@@ -14,7 +14,15 @@
   <div class="title-design" id="navbar">
     <img src="../Euphoria/assets/Asset 1@2x.png" alt="" style="width: 90px; height: 55px; padding-left: 1%;
     padding-bottom: 2%;">
+    <div class="profile-container">
+      <button class="profile-button">U</button>
+      <div class="dropdown">
+          <button onclick="goToHome()">Home</button>
+          <button onclick="logout()">Log Out</button>
+    </div>
   </div>
+  </div>
+  
   <div class="grab">
     <h1 id="grab2" style="font-size: 50px; color: rgb(58, 53, 53);" >Grab your passes soon!!</h1>
   </div>
@@ -28,7 +36,7 @@
           <input id="name" name="firstname" class="ipstyle" type="text" placeholder="Enter your name" style="
                 padding-left: 10px;
                 margin-top: 5px;
-                overflow: hidden; " />
+                overflow: hidden; " required />
         </div>
         <br>  
         <div class="one-2">
@@ -37,7 +45,7 @@
                 padding-left: 10px;
                 margin-top: 5px;
                 overflow: hidden;
-              " />
+              " required />
         </div>
       </div>
       <!--  -->
@@ -72,7 +80,7 @@
                 padding-left: 10px;
                 margin-top: 5px;
                 overflow: hidden;
-              " maxlength="0" />
+              " maxlength="0" readonly />
         </div>
       </div>
       <!--  -->
@@ -90,7 +98,7 @@
                 overflow: hidden;
                 border: 1px solid silver;
                 /* border-radius: 5px; */
-              " maxlength="0" />
+              " maxlength="0" readonly/>
         </div>
         <div class="one-2">
           <label id="l6" for="eventdetails" style="margin-left: 72px;">Email:</label>
@@ -98,7 +106,7 @@
                 padding-left: 10px;
                 margin-top: 5px;
                 margin-left: 72px;
-              "/>
+              " required />
         </div>
       </div>
       <br>
@@ -118,7 +126,8 @@
           <button
             id="refund_amount"
             class="btn-each-main"
-            style="background-color: #f51616; color: white"
+            style="background-color: #f51616; color: white" type="button"
+            onclick="validateInputs() "
           >
           Save Details
           </button>
@@ -134,7 +143,30 @@
     </form>
   </div>
   
-  
+  <script>
+    // Navigation Functions
+    function goToHome() {
+        window.location.href = '/LandingInsider.html'; // Redirect to the home page
+    }
+    function logout() {
+        window.location.href = '/index.html'; // Redirect to the login page
+    }
+
+    function validateInputs() {
+            const nameField = document.getElementById('name').value.trim();
+            const emailField = document.getElementById('mob').value.trim();
+            const passField = document.getElementById('numberTicket').value.trim();
+            const dateField = document.getElementById('eventDetails').value.trim();
+            const amountField = document.getElementById('fare').value.trim();
+            const eventField = document.getElementById('chooseevent').value.trim();
+
+            if (!nameField || !emailField || !passField || !dateField || !amountField || !eventField) {
+                alert('Please fill out all required fields.');
+            } else {
+                alert('Details saved successfully!');
+            }
+        }
+</script>
 
 </body>
 

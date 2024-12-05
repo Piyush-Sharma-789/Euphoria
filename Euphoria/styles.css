@@ -71,6 +71,7 @@
 /* Dropdown container styling */
 .dropdown {
   position: relative;
+  float: inline-end;
   display: inline-block;
 }
 
