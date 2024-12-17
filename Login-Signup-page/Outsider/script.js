@@ -79,7 +79,7 @@ submitButton.addEventListener("click", function() {
     })
     .catch((error) => {
       console.error("Login error:", error);
-      window.alert("Error occurred. Try again.");
+      window.alert("Please fill correct email or password!");
     });
 });
 

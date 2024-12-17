@@ -130,7 +130,7 @@ detailForm.addEventListener("submit", (event) => {
     mail: mob.value,
   }).then(() => {
     console.log("Data saved to Firebase successfully.");
-    window.location.href = "/Checkout-page/index.html";
+    window.location.href = "/Checkout-page/indexoutside.html";
   }).catch((error) => {
     console.error("Error saving data to Firebase:", error);
   });
